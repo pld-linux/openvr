@@ -1,0 +1,11 @@
+--- openvr-1.23.8/src/CMakeLists.txt.orig	2023-03-08 01:40:29.000000000 +0100
++++ openvr-1.23.8/src/CMakeLists.txt	2023-03-31 19:12:34.535135850 +0200
+@@ -103,7 +103,7 @@ endif()
+ target_link_libraries(${LIBNAME} ${EXTRA_LIBS} ${CMAKE_DL_LIBS})
+ target_include_directories(${LIBNAME} PUBLIC ${OPENVR_HEADER_DIR})
+ 
+-install(TARGETS ${LIBNAME} DESTINATION lib)
++install(TARGETS ${LIBNAME} DESTINATION lib${LIB_SUFFIX})
+ install(FILES ${PUBLIC_HEADER_FILES} DESTINATION include/openvr)
+ 
+ # Generate a .pc file for linux environments

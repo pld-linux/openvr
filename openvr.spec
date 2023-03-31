@@ -13,6 +13,7 @@ Group:		Libraries
 Source0:	https://github.com/ValveSoftware/openvr/archive/v%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	2dd6945040b63c9a2d1ce4ece00bda7e
 Patch0:		%{name}-pc.patch
+Patch1:		%{name}-libdir.patch
 URL:		https://github.com/ValveSoftware/openvr
 BuildRequires:	cmake >= 2.8
 BuildRequires:	libstdc++-devel >= 6:4.7
@@ -61,6 +62,7 @@ Statyczna biblioteka OpenVR SDK.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 # prebuilt binaries
 %{__rm} -r bin lib
