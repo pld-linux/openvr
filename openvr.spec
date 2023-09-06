@@ -5,13 +5,13 @@
 Summary:	OpenVR SDK - API and runtime that allows access to VR hardware
 Summary(pl.UTF-8):	OpenVR SDK - API i biblioteka uruchomieniowa pozwalająca na dostęp do sprzętu VR
 Name:		openvr
-Version:	1.23.8
+Version:	1.26.7
 Release:	1
 License:	BSD
 Group:		Libraries
 #Source0Download: https://github.com/ValveSoftware/openvr/tags
 Source0:	https://github.com/ValveSoftware/openvr/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	2dd6945040b63c9a2d1ce4ece00bda7e
+# Source0-md5:	46066cfde8bdeaed08278c07e3cf09d3
 Patch0:		%{name}-pc.patch
 Patch1:		%{name}-libdir.patch
 URL:		https://github.com/ValveSoftware/openvr
