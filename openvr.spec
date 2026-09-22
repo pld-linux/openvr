@@ -5,17 +5,17 @@
 Summary:	OpenVR SDK - API and runtime that allows access to VR hardware
 Summary(pl.UTF-8):	OpenVR SDK - API i biblioteka uruchomieniowa pozwalająca na dostęp do sprzętu VR
 Name:		openvr
-Version:	1.26.7
+Version:	2.15.6
 Release:	1
 License:	BSD
 Group:		Libraries
 #Source0Download: https://github.com/ValveSoftware/openvr/tags
 Source0:	https://github.com/ValveSoftware/openvr/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	46066cfde8bdeaed08278c07e3cf09d3
+# Source0-md5:	a061823534f724d1f2f11f0b27960b82
 Patch0:		%{name}-pc.patch
 Patch1:		%{name}-libdir.patch
 URL:		https://github.com/ValveSoftware/openvr
-BuildRequires:	cmake >= 2.8
+BuildRequires:	cmake >= 3.12
 BuildRequires:	libstdc++-devel >= 6:4.7
 BuildRequires:	rpmbuild(macros) >= 1.605
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -106,7 +106,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc LICENSE README.md
-%attr(755,root,root) %{_libdir}/libopenvr_api.so
+%{_libdir}/libopenvr_api.so
 
 %files devel
 %defattr(644,root,root,755)
